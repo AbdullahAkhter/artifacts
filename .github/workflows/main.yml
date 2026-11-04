@@ -6,8 +6,8 @@ jobs:
   demo:
    runs-on: ubuntu-latest
    defaults:
-     run:
-       working-directory: ./Admin
+      run:
+         working-directory: ./Admin
    steps:
      -   uses: actions/checkout@v2.8.0
      -   name: setup Node js
@@ -15,7 +15,7 @@ jobs:
          with:
             node-version: 22.x
             cache: "npm"
-            cache-dependency-path: ./package-lock.json
+            cache-dependency-path: ./Admin/package-lock.json
      -  name: npm install
         run: npm ci
      -  name: build
